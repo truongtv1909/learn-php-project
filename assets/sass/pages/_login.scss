@@ -1,0 +1,64 @@
+.box-login {
+  .box-info {
+    // width: 70%;
+    margin-bottom: 10px;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      &.info-l3 {
+        li {
+          span {
+            width: 152px;
+          }
+        }
+      }
+      li {
+        list-style: none;
+        color: $gray-light;
+        span {
+          width: 140px;
+          display: inline-block;
+          color: $font-color;
+        }
+        input {
+          display: inline-block;
+          max-width: 200px;
+          margin-bottom: 15px;
+          margin-left: -5px;
+          
+        }
+      }
+    }
+  }
+  p {
+    b {
+      font-weight: normal;
+      color: $blue;
+    }
+  }
+  .form-horizontal .control-label {
+      padding-top: 7px;
+      margin-bottom: 0;
+      text-align: left;
+  }
+  a {
+    color: $font-color;
+  }
+  .box-password {
+    position: relative;
+    span.eye {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      width: 30px;
+      height: 30px;
+      background: url(../images/ic-eye-open.png) top left no-repeat;
+      background-size: contain;
+      &.open {
+        background: url(../images/ic-eye.png) top left no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

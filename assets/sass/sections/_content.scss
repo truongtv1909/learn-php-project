@@ -1,0 +1,642 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+// body { margin: 50px; text-align: center; font-family: 'Open Sans', sans-serif; 
+img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  .container {
+    padding: 0;
+    max-width: 1150px;
+  }
+#content {
+  padding-top: 45px;
+  width: auto;
+  //overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: -blackberry-touch;
+  @include transition(right .25s $ease-in-circ, padding-right .25s $ease-in-circ);
+
+  >div[ui-view] {
+    height: 100%;
+  }
+
+  &.ng-enter .page {
+    @include animation(littleFadeInUp .5s ease);
+    @include animation-fill-mode(both);
+    @include backface-visibility(hidden);
+  }
+
+  &.ng-leave .page {
+    @include opacity(0);
+  }
+
+  >[ui-view].ng-enter, >[ui-view].ng-leave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    @include transition(all .5s ease-in-out);
+  }
+
+  >[ui-view].ng-enter {
+    @include opacity(0);
+    @include transform(scale3d(0.5, 0.5, 0.5));
+  }
+
+  >[ui-view].ng-enter-active {
+    @include opacity(1);
+    @include transform(scale3d(1, 1, 1));
+  }
+
+  >[ui-view].ng-leave {
+    @include opacity(1);
+    @include transform(translate3d(0, 0, 0));
+  }
+
+  >[ui-view].ng-leave-active {
+    @include opacity(0);
+    @include transform(translate3d(100px, 100px, 0));
+  }
+
+}
+.content {
+  &.sticky-content {
+    padding-top: 350px;
+  }
+  &.default-content {
+    padding-top: 115px;
+  }
+  &.custom-content {
+    padding-top: 70px;
+  }
+  
+  // padding-top: 115px;
+}
+
+.box-our-fleet {
+  // border-bottom: 1px solid #7f7f7f;
+  padding-bottom: 25px;
+  // padding-bottom: 10px;
+  // padding: 25px 0;
+  .our-fleet-item {
+    text-align:center;
+    &.last-item {
+      padding: 10px 0;
+      display: flex ;
+      flex-direction: column ;
+      flex-wrap: wrap ;
+      justify-content: center ;
+      align-items: center ;
+      align-content: center ;
+    }
+    h3.title-ourfleet {
+      font-size:18px;
+      margin-bottom: 20px;
+
+      // text-transform: capitalize;
+
+    }
+    .txt-segment {
+      font-style: italic;
+    }
+    .photo {
+      img {
+          max-width: 85%;
+          margin: 0 auto;
+        }
+    }
+    .box-inner {
+      margin: 5px 0;
+      img {
+        max-width: 20px;
+      }
+      .photo {
+        // img {
+        //   max-width: 90%;
+        //   margin: 0 auto;
+        // }
+        img {
+          margin-bottom: 2px;
+        }
+        span {
+          color: #23c552;
+          font-weight: bold;
+          font-size: 18px;
+          font-family: arial;
+        }
+      }
+    }
+  }
+}
+
+// Method 1) Pure CSS
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 25px;
+  height: 25px;
+  width: 135px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  text-shadow: 0px 1px 0 #a2a2a2;
+  
+  &-top {
+    color: #e7711b;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  &-bottom {
+    padding: 0;
+    display: block;
+    z-index: 0;
+  }
+}
+.box-reviewer {
+  border-bottom: 1px solid #7f7f7f;
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+  .our-reviewer-item {
+    text-align: center;
+  }
+  h4 {
+    font-size: 18px;
+    color: #00b0f0;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+    &.text-right {
+      color: $brand-primary;
+    }
+  }
+  h6 {
+    color: #000;
+    font-size:16px;
+  }
+}
+// Method 2) Using a Sprite
+.star-ratings-sprite {
+  background: url("../images/ic-star01.png") repeat-x;
+  font-size: 0;
+  height: 36px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 210px;
+  margin: 0 auto;
+  
+  &-rating {
+    background: url("../images/ic-star01.png") repeat-x;
+    background-position: 0 100%;
+    float: left;
+    height: 33px;
+    display:block;
+  }
+  
+}
+.item-right {
+  background: url("../images/ic-star02.png") repeat-x;
+  font-size: 0;
+  height: 36px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 210px;
+  margin: 0 auto;
+  
+  &-rating {
+    background: url("../images/ic-star02.png") repeat-x;
+    background-position: 0 100%;
+    float: left;
+    height: 33px;
+    display:block;
+  }
+  
+}
+
+
+.box-about {
+  border-bottom: 1px solid #7f7f7f;
+  margin-bottom: 40px;
+  padding: 20px 0 40px 0;
+  .box-about-left {
+    .title-about {
+      margin: 0;
+      margin-bottom: 25px;
+      font-size: 26px;
+      span img {
+        max-width: 150px;
+      }
+    }
+    .box-abContent {
+      display: flex ;
+      flex-direction: row ;
+      flex-wrap: wrap ;
+      justify-content: flex-start ;
+      align-items: flex-start ;
+      align-content: center ;
+      .box-left {
+        padding-right: 12px;
+        img {
+          margin-top: 56px;
+        }
+      }
+      img {
+        max-width: 80px;
+      }
+    }
+  }
+  p {
+    margin-bottom: 0px;
+    color: #7f7f7f;
+  }
+  .box-about-right {
+    .box-inner {
+      text-align: center;
+      padding-top: 15px;
+    }
+    .photo-top {
+      position: absolute;
+      top: 0px;
+      right: 15px;
+      img {
+        max-width: 50px;
+      }
+    }
+    h4{
+      font-family: $font-title;
+      padding-top: 10px;
+      font-weight: bold;
+      span {
+        display: inline-block;
+        position: relative;
+        b {
+              // font-weight: normal;
+            display: inline-block;
+            margin-bottom: 18px;
+            position: absolute;
+            right: -16px;
+            bottom: -12px;
+            font-size: 15px;
+        }
+      }
+    }
+    .photo{
+      img {
+        max-width: 80px;
+      }
+
+    }
+  }
+}
+
+
+.box-search {
+  
+  margin-bottom: 30px;
+  padding-top: 100px;
+  -webkit-transition: height 0.4s ease,opacity 0.3s ease;
+  -moz-transition: height 0.4s ease,opacity 0.3s ease;
+  transition: height 0.4s ease,opacity 0.3s ease;
+  background: #fff;
+  // padding: 30px 0;
+  &.sticky-search {
+    position: fixed;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 98;
+    .box-inner-search {
+      width: 100%;
+      padding: 6px 10px;
+
+      .box-left { 
+        padding: 0 10px 0 0;
+        .form-group {
+          label {
+            display: none;
+          }
+          .form-control {
+            // margin-bottom: 10px;
+            height: 35px!important;
+            padding: 5px 16px;
+            font-size: 14px;
+
+          }
+
+        }
+        .box-equal {
+          margin-top: -5px;
+        }
+        .number {
+          color: $brand-primary;
+          font-weight: bold;
+        }
+        .ic-equal {
+          width: 32px;
+          height: 14px;
+          position: relative;
+          display: block;
+          margin: 15px auto auto;
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            content: "";
+            background: $brand-primary;
+          }
+          &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            content: "";
+            background: $brand-primary;
+          }
+          
+        }
+      }
+      .btn {
+        width: 17%;
+        float: left;
+        height: auto;
+        position: relative;
+        z-index: 2;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0px 16px;
+        line-height: 33px;
+        height: 35px;
+      }
+    }
+  }
+  &.default-search {
+    position: fixed;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 98;
+    margin-bottom: 20px;
+    .box-inner-search {
+      width: 100%;
+      padding: 6px 10px;
+      .box-left { 
+        padding: 0 10px 0 0;
+        .form-group {
+          label {
+            display: none;
+          }
+          .form-control {
+            // margin-bottom: 10px;
+            height: 35px;
+            padding: 5px 16px;
+            font-size: 14px;
+
+          }
+        }
+        .box-equal {
+          margin-top: -5px;
+        }
+        .number {
+          color: $brand-primary;
+          font-weight: bold;
+        }
+        .ic-equal {
+          width: 32px;
+          height: 14px;
+          position: relative;
+          display: block;
+          margin: 0px auto auto;
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            content: "";
+            background: $brand-primary;
+          }
+          &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            content: "";
+            background: $brand-primary;
+          }
+          
+        }
+      }
+      .btn {
+        width: 17%;
+        float: left;
+        height: auto;
+        position: relative;
+        z-index: 2;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0px 16px;
+        line-height: 33px;
+        height: 35px;
+      }
+    }
+  }
+  
+  .box-inner-search {
+    
+    width: 1000px;
+    margin: 0 auto;
+    
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    textarea {
+      resize: none;
+      height: auto;
+    }
+    &:before {
+      position: absolute;
+      top:0;
+      left:0;
+      right: 0;
+      bottom: 0;
+      content:"";
+      border: 1px solid #7f7f7f;
+      border-radius: 5px;
+      z-index: 1;
+    }
+    .box-left {
+      width: 83%;
+      float: left;
+      display: flex ;
+      flex-direction: row ;
+      flex-wrap: wrap ;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: center ;
+      padding: 8px 10px;
+      position: relative;
+      z-index: 2;
+
+    }
+    .form-group {
+      margin-bottom: 0;
+      width: 44%;
+      float: left;
+      .form-control {
+        // margin-bottom: 10px;
+        height: 60px;
+        padding: 5px 16px;
+        font-size: 16px;
+        color: #222;
+        @include placeholder { 
+          font-size: 16px;
+          padding: 0px;
+          color: #222;
+        }
+      }
+      .form-control-default {
+        background: #f2f2f2;
+        border: 1px solid #f2f2f2;
+      }
+      label {
+        display: block;
+        // font-weight: bold;
+        font-size: 20px;
+        color: #616f77;
+        margin-bottom: 2px;
+      }
+    }
+    .btn {
+      width: 17%;
+      float: left;
+      height: 105px;
+      position: relative;
+      z-index: 2;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .box-equal {
+      width: 12%;
+      text-align: center;
+    }
+    .ic-equal {
+      width: 47px;
+      height: 20px;
+      position: relative;
+      display: block;
+      margin: 49px auto auto;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        content: "";
+        background: $brand-primary;
+      }
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        content: "";
+        background: $brand-primary;
+      }
+      
+    }
+    .btn {
+      font-weight: bold;
+    }
+  }
+}
+
+.sst-title {
+  @include sst-title();
+}
+.box-step {
+  border-bottom: 1px solid #7f7f7f;
+  margin-bottom: 50px;
+}
+.box-booking-step {
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    // width: 1000px;
+    overflow: hidden;
+    &:before {
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      content: "";
+      background: #7f7f7f;
+      z-index: 1;
+      top: 50%;
+      height: 1px;
+    }
+    li {
+      list-style: none;
+      width:25%;
+      // display: inline-block;
+      float: left;
+      text-align: center;
+      padding: 50px 0;
+      position: relative;
+      font-size: 14px;
+      color: #7f7f7f;
+      &.active {
+        div {
+          &:before {
+            position: absolute;
+            top: -28px;
+            right: 50%;
+            content: "";
+            width: 66px;
+            height: 35px;
+            background: url(../images/ic-car-booking.png) no-repeat;
+            margin-right: -33px;
+            z-index: 3;
+            display: block;
+            background-size: contain;
+          }
+          font-weight: bold;
+        }
+        
+      }
+      div {
+        width: 160px;
+        height: 67px;
+        border-bottom-left-radius: 50% 50%;
+        border-bottom-right-radius: 50% 50%;
+        border-top-left-radius: 50% 50%;
+        border-top-right-radius: 50% 50%;
+        display: flex ;
+        flex-direction: row ;
+        // flex-wrap: wrap ;
+        justify-content: center ;
+        align-items: center ;
+        align-content: center ;
+        border: 1px solid #7f7f7f;
+        background: #fff;
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+      }
+    }
+  }
+}

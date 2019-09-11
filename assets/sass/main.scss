@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Lucida Calligraphy';
+    src: url('../fonts/LucidaCalligraphy-Italic.eot');
+    src: url('../fonts/LucidaCalligraphy-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LucidaCalligraphy-Italic.woff2') format('woff2'),
+        url('../fonts/LucidaCalligraphy-Italic.woff') format('woff'),
+        url('../fonts/LucidaCalligraphy-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+font-family: 'Georgia';
+font-style: normal;
+font-weight: normal;
+src: local('Georgia Regular'), url('../fonts/georgia.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Georgia';
+font-style: italic;
+font-weight: normal;
+src: local('Georgia Italic'), url('../fonts/georgiai.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Georgia';
+font-style: normal;
+font-weight: bold;
+src: local('Georgia Bold'), url('../fonts/georgiab.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Georgia Bold Italic';
+font-style: italic;
+font-weight: bold;
+src: local('Georgia Bold Italic'), url('../fonts/georgiaz.woff') format('woff');
+}
+// import google fonts
+@import url(http://fonts.googleapis.com/css?family=Dosis:300,700|Ubuntu+Mono|Lato:300,400,700,300italic,400italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Quintessential&display=swap);
+
+// Bourbon
+@import 'bourbon/bourbon';  // bourbon plugin
+
+// My variables, mixins and colors
+@import "inc/mixins"; // main mixins
+@import "inc/colors"; // colors variables
+@import "inc/variables"; // other variables
+
+// Vendor
+
+// Sections
+@import "sections/content"; // content section
+@import "sections/header"; // header section
+@import "sections/footer"; // footer section
+@import "sections/nav"; // navigation section
+@import "sections/nav-min"; // navigation sm/xs
+@import "sections/page-header"; // page header section
+//ß@import "sections/rightbar"; // rightbar section
+@import "sections/page-loader"; // page loader
+@import "sections/add-nav"; // additional navbar under breadcrumbs
+
+// Components
+// @import "components/tiles"; // tiles
+@import "components/form-elements"; // form elements
+//@import "components/ui-elements"; // ui elements
+@import "components/dropdowns"; // dropdowns
+@import "components/charts"; // charts
+@import "components/buttons"; // buttons
+@import "components/icons";  // icons
+@import "components/lists"; // lists
+@import "components/media"; // media
+// @import "components/thumbnails"; // thumbnails
+@import "components/typography"; // typography
+@import "components/loading-bar"; // loading bar
+@import "components/daterangepicker"; // daterangepicker
+@import "components/alerts-notifications"; // alerts and notifications
+@import "components/tabs-pills"; // tabs and pills
+@import "components/modals"; // modals
+@import "components/portlets"; // portlets
+@import "components/progress"; // progress bars
+@import "components/tbox"; // table layout
+// @import "components/tree"; // file tree
+@import "components/chosen"; // chosen plugin
+@import "components/tables"; // tables
+@import "components/cards"; // two sided cards
+//@import "components/carousel"; // carousel
+@import "components/widgets"; // widgets
+//@import "components/streamline"; // streamline
+@import "components/maps"; // maps
+@import "components/calendar"; // calendar
+@import "components/gallery"; // gallery
+
+
+// Shared
+@import "shared/global"; // global shared settings
+@import "shared/color-schemes"; // color schemes
+@import "shared/print"; // print css
+@import "shared/animations"; // animations
+
+//Pages
+@import "pages/global"; // global page settings
+// @import "pages/tree"; // file tree settings
+//@import "pages/chat"; // chat page settings
+@import "pages/mail"; // mail page settings
+@import "pages/search_results"; // search results page settings
+@import "pages/a1"; // page a1
+@import "pages/b2"; // page B2
+@import "pages/b3"; // page B3
+@import "pages/b4"; // page B4
+@import "pages/b5"; // page B5
+@import "pages/login"; // page B5
+@import "pages/dc"; // page B5
+

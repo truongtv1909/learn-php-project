@@ -1,0 +1,130 @@
+.box-transfer {
+  display: flex ;
+  flex-direction: row ;
+  flex-wrap: wrap ;
+  justify-content: center ;
+  align-items: center ;
+  align-content: center ;
+  background: transparent;
+  margin-bottom: 10px;
+  .box-item a {
+    width: 300px;
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    justify-content: center ;
+    align-items: center ;
+    align-content: center ;
+    &.active {
+      .box-select {
+        &:before {
+          background: $gray-light;
+        }
+        
+      }
+    }
+    // margin-bottom: 20px;
+    .box-select {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid $gray-light;
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      margin-right: 15px;
+      &:before {
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        width: 14px;
+        height: 14px;
+        margin-left: -7px;
+        margin-top: -7px;
+        border: 1px solid $gray-light;
+        z-index: 2;
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    &.featured {
+      li {
+        list-style: none;
+        display: inline-block;
+        img {
+          max-width: 165px;
+        }
+      }
+    }
+    li {
+      list-style: none;
+      display: inline-block;
+      
+      img {
+        max-width: 80px;
+        // border:1px solid #ccc;
+      }
+    }
+  }
+}
+.box-transfer-inner {
+  .col-sm-6 {
+    width: 45%;
+    float: right;
+  }
+  .box-info {
+    // width: 70%;
+    &.right {
+      ul {
+        li {
+          color: $font-color;
+          span {
+            color: $font-color;
+          }
+          &:last-child {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        color: $gray-light;
+        span {
+          width: 150px;
+          display: inline-block;
+          color: $font-color;
+        }
+        input {
+          display: inline-block;
+          max-width: 200px;
+          margin-bottom: 15px;
+          margin-left: -5px;
+          
+        }
+      }
+    }
+  }
+  .box-policy {
+    width: 53%;
+    text-align: right;
+    margin-top: -20px;
+  }
+  .policy {
+    text-align: right;
+      b {
+          color: #00b0f0;
+          font-weight: normal;
+        }
+    }
+}
